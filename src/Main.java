@@ -23,7 +23,7 @@ public class Main {
 
         //création d'un média
         //Media media = new Media("Media de test");
-
+        //TODO : voir pour l'affichage du n° de média
         GestionDeMedias gestion = new GestionDeMedias();
 
         //ajout des médias à la liste
@@ -34,12 +34,12 @@ public class Main {
         //gestion.ajouterMedia(cd);
 
         //affichage des médias
-        gestion.afficherLesMedias();
+        //gestion.afficherLesMedias();
 
         //affichage des auteurs
-        //gestion.afficherLesAuteurs();
+        gestion.afficherLesAuteurs();
 
         //affichage des langues
-
+        gestion.afficherLesLangues();
     }
 }

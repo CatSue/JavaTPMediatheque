@@ -37,29 +37,42 @@ public class GestionDeMedias {
     /**
      * Objectif : afficher les auteurs et le numéro de tous les médias
      */
-    //TODO : utilisation pour les médias possédant un auteur uniquement ?
+    //TODO : utilisation de toString ?
     public void afficherLesAuteurs(){
         for(Media media : listeMedias){
-            System.out.println("Media : numero " + media.getNumEnr());
+            System.out.print("Media : numero " + media.getNumEnr());
 
             if(media instanceof Livre){
-                System.out.println("Auteur : " + ((Livre) media).getAuteur());
+                System.out.println(", Auteur : " + ((Livre) media).getAuteur());
             }
-            if(media instanceof CDAudio){
-                System.out.println("Auteur : " + ((CDAudio) media).getAuteur());
+            else if(media instanceof CDAudio){
+                System.out.println(", Auteur : " + ((CDAudio) media).getAuteur());
             }
-            if(media instanceof DVDVideo) {
-                System.out.println("Pas d'auteur specifie");
+            else {
+                System.out.println(", Pas d'auteur specifie");
             }
         }
     }
 
     /**
      * Objectif : afficher les langues et le numéro de tous les médias
+     * pour les encyclopédies et les DVDVidéo
      */
-    //TODO : coder la méthode
+    //TODO : utilisation de toString ?
     public void afficherLesLangues(){
-        //return "test";
+        for(Media media : listeMedias) {
+            System.out.print("Media : numero " + media.getNumEnr());
+
+            if(media instanceof Encyclopedie){
+                System.out.println(", Langue: " + ((Encyclopedie) media).getLangue());
+            }
+            else if(media instanceof DVDVideo){
+                System.out.println(", Langue: " + ((DVDVideo) media).getLangue());
+            }
+            else {
+                System.out.println(", Pas de langue specifiee");
+            }
+        }
     }
 
 }
